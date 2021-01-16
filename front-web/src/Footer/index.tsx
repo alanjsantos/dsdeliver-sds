@@ -14,7 +14,7 @@ function Footer() {
                 <a href="https://linkedin.com" target="_new">
                     <LinkedinIcon />
                 </a>
-                <a href="https://instagram.com">
+                <a href="https://instagram.com" target="_new">
                     <InstagramIcon />
                 </a>
             </div>
