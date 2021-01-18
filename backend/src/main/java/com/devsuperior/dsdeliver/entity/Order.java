@@ -23,15 +23,10 @@ public class Order implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	private String address;
-	
 	private Double latitude;
-	
 	private Double longitude;
-	
 	private Instant moment;
-	
 	private OrderStatus status;
 	
 	@ManyToMany
@@ -100,6 +95,17 @@ public class Order implements Serializable{
 
 	public void setStatus(OrderStatus status) {
 		this.status = status;
+	}
+	
+	//calculando total de produtos
+	public Double getTotal() {
+		double sum = 0.0;
+		
+		for(Product p: products) {
+			sum += p.getPrice();
+		}
+		
+		return sum;
 	}
 
 	public Set<Product> getProducts() {
