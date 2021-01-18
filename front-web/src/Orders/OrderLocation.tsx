@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import AsyncSelect from "react-select/async";
 import { useState } from "react";
 import { fetchLocalMapBox } from "../api";
-import { animatedScrollTo } from "react-select/src/utils";
 import { OderLocationData } from "./types";
 
 const initialPosition = {
