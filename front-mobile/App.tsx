@@ -1,3 +1,4 @@
+import React from "react";
 import {
   useFonts,
   OpenSans_400Regular,
@@ -5,10 +6,8 @@ import {
 } from "@expo-google-fonts/open-sans";
 import AppLoading from "expo-app-loading";
 import { StatusBar } from "expo-status-bar";
-import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import Header from "./src/Header/index";
-import Home from "./src/Home";
+import Routes from './src/Routes';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -22,8 +21,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Header />
-      <Home />
+      <Routes />
     </View>
   );
 }
